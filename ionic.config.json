@@ -1,0 +1,7 @@
+{
+  "name": "SunStuff",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
