@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-icon slot="start" ></ion-icon>
+      <ion-label>
+        Sunrise: {{data?.sunrise}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start"></ion-icon>
+      <ion-label>
+        Sunset {{data?.sunset}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start"></ion-icon>
+      <ion-label>
+        Solar noon: {{data?.solar_noon}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start"></ion-icon>
+      <ion-label>
+        Day length: {{data?.day_length}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start"></ion-icon>
+      <ion-label>
+        Civil twilight begin: {{data?.civil_twilight_begin}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start"></ion-icon>
+      <ion-label>
+        Civil twilight end: {{data?.civil_twilight_end}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start"></ion-icon>
+      <ion-label>
+        Nautical twiligh begin: {{data?.nautical_twilight_begin}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start"></ion-icon>
+      <ion-label>
+        Nautical twilight end: {{data?.nautical_twilight_end}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start"></ion-icon>
+      <ion-label>
+        Astronomical twilight begin: {{data?.astronomical_twilight_begin}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start"></ion-icon>
+      <ion-label>
+        Astronomical twilight end: {{data?.astronomical_twilight_end}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

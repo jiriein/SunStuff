@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Settings</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        Close
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list [formGroup]="form">
+    <ion-item *ngFor="let place of places; let i = index">
+      <ion-checkbox slot="start" [value]="i" formControlName="ch{{i + 1}}"></ion-checkbox>
+      <ion-label>{{place.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

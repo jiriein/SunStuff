@@ -1,20 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Home </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openSettings()">
+        <ion-icon slot="icon-only" name="cog-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ng-container *ngFor="let item of RDic">
+    <ion-card *ngIf="item.data | async; let data_" routerLink="/details" (click)="openDetail(data_.results)">
+      <ion-card-header>
+        <ion-card-title>{{item.name}}</ion-card-title>
+        <ion-card-subtitle>
+          <ion-row class="ion-align-items-center">
+            <ion-col class="ion-no-padding"> Sunrise: {{data_.results.sunrise}} </ion-col>
+            <ion-col class="ion-no-padding"> Day Length: {{data_.results.day_length}} </ion-col>
+          </ion-row>
+          <ion-row class="ion-align-items-center">
+            <ion-col class="ion-no-padding"> Sunset: {{data_.results.sunset}} </ion-col>
+            <ion-col class="ion-no-padding"> Solar noon: {{data_.results.solar_noon}} </ion-col>
+          </ion-row>
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </ng-container>
+
 </ion-content>
